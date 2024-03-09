@@ -1,0 +1,31 @@
+[package]
+name = "iconic"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+# disable publishing
+publish = false
+
+[dependencies]
+serde = { version = "1.0.188", features = ["derive"] }
+futures = "0.3.28"
+site_icons = "0.6.4"
+env_logger = "0.11.3"
+itertools = "0.12.1"
+
+[dependencies.log]
+version = "0.4.21"
+features = ["release_max_level_debug"]
+
+[dependencies.clap]
+version = "4.5.2"
+features = ["derive", "env", "wrap_help"]
+
+[dependencies.tokio]
+version = "1.23.0"
+features = ["full"]
+
+[dependencies.mongodb]
+version = "2.8.0"
+features = ["tokio-runtime"]
